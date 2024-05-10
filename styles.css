@@ -38,6 +38,9 @@ header {
   align-items: center;
   padding: 10px 20px;
   color: white;
+  margin-left: 50px;
+  gap: 80px;
+  margin-right: 150px;
 }
 nav {
   display: flex;
@@ -45,9 +48,6 @@ nav {
   align-items: center;
   flex-direction: column;
   margin-right: 120px;
-  margin-right: 50px;
-  width: 80vw;
-  gap: 100px;
 }
 .nav-links {
   display: flex;
