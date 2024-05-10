@@ -3,6 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: var(--Off-white);
+}
+main {
+  margin: 50px;
+  margin-top: 20px;
+  display: grid;
+  width: 80vw;
+  grid-template-columns: repeat(3fr, 1fr);
+  grid-template-rows: repeat(3fr, 1fr);
+  gap: 10px;
+  grid-template-areas:
+    "image image image news"
+    "article article article news"
+    "features features features features";
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -15,14 +40,83 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  margin-right: 120px;
+  margin-right: 50px;
+  width: 80vw;
+  gap: 100px;
 }
 .nav-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   gap: 20px;
 }
 nav a {
   text-decoration: none;
+}
+.color-image {
+  grid-area: image;
+}
+/* styling the news cards */
+.news {
+  background-color: var(--Very-dark-blue);
+  width: 400px;
+  color: white;
+  grid-area: news;
+}
+.news h2 {
+  color: var(--Soft-orange);
+  padding: 10px;
+}
+.news h3 {
+  padding: 10px;
+}
+.news p {
+  padding: 10px;
+  color: var(--Grayish-blue);
+}
+/* styling the title*/
+.news-article {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  width: 700px;
+  grid-area: article;
+}
+.heading {
+  width: 50%;
+}
+.paragraph {
+  width: 40%;
+}
+
+.features {
+  display: flex;
+  gap: 90px;
+  grid-area: features;
+}
+.feature-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 320px;
+}
+hr {
+  width: 70%;
+  margin-left: 34px;
+}
+.news-item {
+  width: 80%;
+  margin-left: 34px;
+}
+.news h2 {
+  margin-left: 34px;
+}
+.paragraph a {
+  text-decoration: none;
+  color: var(--Off-white);
+  background-color: var(--Soft-orange);
+  padding: 10px;
+  margin-top: 20px;
 }
